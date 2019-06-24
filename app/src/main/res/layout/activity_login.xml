@@ -1,0 +1,22 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/login_activity_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Welcome"
+        android:gravity="center"
+        android:textSize="30dp"
+        android:textColor="@color/myColor"
+        android:textStyle="italic"
+        android:layout_marginTop="30dp"/>
+    <FrameLayout
+        android:id="@+id/login_activity_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </FrameLayout>
+
+</LinearLayout>

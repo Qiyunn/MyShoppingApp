@@ -1,0 +1,73 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp">
+
+    <ImageView
+        android:id="@+id/cart_image_view"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/ic_launcher_background" />
+
+    <TextView
+        android:id="@+id/cart_text_view_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@+id/cart_image_view"
+        android:text="name"
+        android:textSize="18dp" />
+
+    <Button
+        android:id="@+id/cart_button_remove"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_below="@+id/cart_text_view_name"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@+id/cart_image_view"
+        android:background="@drawable/ic_remove_circle_outline_black_24dp" />
+
+    <TextView
+        android:id="@+id/cart_text_view_quantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cart_text_view_name"
+        android:layout_toRightOf="@+id/cart_button_remove"
+        android:layout_marginTop="5dp"
+        android:text="1"
+        android:layout_marginHorizontal="5dp"/>
+    <Button
+        android:id="@+id/cart_button_add"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_below="@+id/cart_text_view_name"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@+id/cart_text_view_quantity"
+        android:background="@drawable/ic_add_circle_outline_black_24dp" />
+    <TextView
+        android:id="@+id/cart_text_view_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2000"
+        android:textSize="18dp"
+        android:layout_below="@+id/cart_text_view_name"
+        android:layout_alignParentRight="true"/>
+
+    <Button
+        android:id="@+id/cart_button_delete"
+        android:background="@drawable/button_add"
+        android:layout_below="@+id/cart_text_view_price"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="10dp"
+        android:text="delete"
+        android:layout_width="70dp"
+        android:layout_height="30dp" />
+    <View
+        android:layout_below="@+id/cart_button_delete"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="3dp"
+        android:background="#ccc"
+        />
+</RelativeLayout>
