@@ -131,7 +131,7 @@ public class DBHelper extends SQLiteOpenHelper {
 
         ContentValues values=new ContentValues();
         values.put(COlUMN_QUANTITY,cart.getQuantity()+1);
-        values.put(COlUMN_PRODUCT_PRICE,cart.getProductPrice()+cart.getProductPrice()/cart.getQuantity());
+//        values.put(COlUMN_PRODUCT_PRICE,cart.getProductPrice()+cart.getProductPrice()/cart.getQuantity());
 
         database.update(TABLE_NAME,values,COlUMN_PRODUCT_NAME+"=?",new String[]{product.getName()});
     }
@@ -139,19 +139,37 @@ public class DBHelper extends SQLiteOpenHelper {
    public void updateAddQuantity(Cart cart){
         ContentValues values=new ContentValues();
         values.put(COlUMN_QUANTITY,cart.getQuantity()+1);
-        values.put(COlUMN_PRODUCT_PRICE,cart.getProductPrice()+cart.getProductPrice()/cart.getQuantity());
+//        values.put(COlUMN_PRODUCT_PRICE,cart.getProductPrice()+cart.getProductPrice()/cart.getQuantity());
         database.update(TABLE_NAME,values,COlUMN_ID+"=?",new String[]{String.valueOf(cart.getCartItemId())});
    }
 
     public void updateMinusQuantity(Cart cart){
         ContentValues values=new ContentValues();
         values.put(COlUMN_QUANTITY,cart.getQuantity()-1);
-        values.put(COlUMN_PRODUCT_PRICE,cart.getProductPrice()-cart.getProductPrice()/cart.getQuantity());
+//        values.put(COlUMN_PRODUCT_PRICE,cart.getProductPrice()-cart.getProductPrice()/cart.getQuantity());
         database.update(TABLE_NAME,values,COlUMN_ID+"=?",new String[]{String.valueOf(cart.getCartItemId())});
     }
 
     public void deleteProduct(Cart cart){
         database.delete(TABLE_NAME,COlUMN_ID+"=?",new String[]{String.valueOf(cart.getCartItemId())});
+    }
+
+    public int getAmount(){
+        int amount=0;
+        ArrayList<Cart> list=selectFromCart();
+        for(int i=0;i<list.size();i++){
+            amount=amount +list.get(i).getQuantity();
+        }
+        return amount;
+    }
+
+    public int getPrice(){
+        int price=0;
+        ArrayList<Cart> list=selectFromCart();
+        for(int i=0;i<list.size();i++){
+            price=price+list.get(i).getQuantity()*list.get(i).getProductPrice();
+        }
+        return price;
     }
 
 

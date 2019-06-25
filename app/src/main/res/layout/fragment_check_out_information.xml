@@ -1,0 +1,47 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp">
+    <TextView
+        android:id="@+id/information_fragment_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Shipping Address"
+        android:textSize="32dp"
+        android:textStyle="bold"
+        android:layout_gravity="center"/>
+    <EditText
+        android:id="@+id/information_fragment_edit_name"
+        android:layout_width="250dp"
+        android:hint="put you name"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:id="@+id/information_fragment_edit_city"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:hint="put the city"
+        android:layout_gravity="center"/>
+    <EditText
+        android:id="@+id/information_fragment_edit_pincode"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:hint="put the pin"
+        android:layout_gravity="center"/>
+    <EditText
+        android:id="@+id/information_fragment_edit_phone"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:hint="put your phone num"
+        android:layout_gravity="center"/>
+    <Button
+        android:id="@+id/information_fragment_next_button"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_add"
+        android:layout_gravity="center"
+        android:text="next"
+        android:layout_marginTop="40dp"/>
+</LinearLayout>

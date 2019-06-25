@@ -48,13 +48,7 @@ public class MyCartRecyclerAdapter extends RecyclerView.Adapter<MyCartRecyclerAd
         Glide.with(context).load(cart.getProductImage()).into(myViewHolder.imageView);
         myViewHolder.textName.setText(cart.getProductName());
         myViewHolder.textQuantity.setText(String.valueOf(cart.getQuantity()));
-        myViewHolder.textPrice.setText("$"+String.valueOf(cart.getProductPrice()));
-
-//        totalAmount=Integer.parseInt(myViewHolder.textQuantity.getText().toString());
-//        int sumAmount=Integer.parseInt(myViewHolder.textQuantity.getText().toString());
-//        Log.i("Mytag","clickListener: " +clickListenner);
-//        int sumPrice=Integer.parseInt(myViewHolder.textQuantity.getText().toString())* Integer.parseInt(myViewHolder.textPrice.getText().toString());
-//        clickListenner.sendData(sumAmount);
+        myViewHolder.textPrice.setText("$"+String.valueOf(cart.getProductPrice()*cart.getQuantity()));
     }
 
 
@@ -86,20 +80,15 @@ public class MyCartRecyclerAdapter extends RecyclerView.Adapter<MyCartRecyclerAd
         @Override
         public void onClick(View v) {
             clickListenner.itemClicked(v,getAdapterPosition());
-//            onBindViewHolder(this,getAdapterPosition());
-//                    dbHelper.deleteProduct(cart);
-//                    context.startActivity(new Intent(context,CartActivity.class));
         }
     }
 
     public void setClickListener(ClickListenner clickListenner){
         this.clickListenner = clickListenner;
-//        Log.i("Mytag","clickListener init: " + clickListener);
     }
 
     public interface ClickListenner{
         public void itemClicked(View v,int position);
-//        public void sendData(int sumAmount);
     }
 
 }

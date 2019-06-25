@@ -1,39 +1,25 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:layout_height="match_parent">
 
     <include layout="@layout/tool_bar"/>
-    <android.support.v7.widget.RecyclerView
-        android:layout_above="@+id/linear_layout"
-        android:id="@+id/cart_activity_recycler_view"
-        android:layout_below="@+id/tool_bar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
 
-    </android.support.v7.widget.RecyclerView>
-    <LinearLayout
-        android:id="@+id/linear_layout"
-        android:layout_width="wrap_content"
+    <FrameLayout
+        android:id="@+id/cart_activity_fragmet1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tool_bar"
+        android:layout_above="@+id/cart_activity_fragment2">
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/cart_activity_fragment2"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="5dp"
-        android:orientation="vertical"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginRight="10dp">
-        <TextView
-            android:id="@+id/cart_activity_text_view_amount"
-            android:text="Total amount is:"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="18dp"/>
-        <TextView
-            android:id="@+id/cart_activity_text_view_price"
-            android:text="Total price is:"
-            android:layout_marginRight="10dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="18dp"/>
-    </LinearLayout>
+        android:layout_alignParentBottom="true">
+
+    </FrameLayout>
+
 
 </RelativeLayout>

@@ -1,0 +1,49 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    >
+    <TextView
+        android:id="@+id/pay_fragment_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pay"
+        android:textSize="32dp"
+        android:textStyle="bold"
+        android:layout_gravity="center"/>
+    <RadioGroup
+        android:id="@+id/pay_fragment_radio_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="40dp">
+        <RadioButton
+            android:id="@+id/pay_fragment_radio_button1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="COD"/>
+        <RadioButton
+            android:id="@+id/pay_fragment_radio_button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Credit Card"/>
+        <RadioButton
+            android:id="@+id/pay_fragment_radio_button3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Wallet" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/pay_fragment_button"
+        android:layout_gravity="center"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_add"
+        android:layout_marginTop="40dp"
+        android:text="pay"
+        />
+
+
+</LinearLayout>
